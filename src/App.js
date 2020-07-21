@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles.css";
+import "./styles/styles.css";
 import Home from "./Home.js";
 import Main from "./Main.js";
-import NotFound from "./NotFound.js";
+import NotFound from "./components/NotFound.js";
 import {
   BrowserRouter as Router,
   Switch,
