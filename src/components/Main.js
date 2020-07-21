@@ -23,7 +23,6 @@ function Main() {
         return Promise.all(popularHeroNames.map(item => anAsyncFunction(item)))
       }
     const clearData = () => {
-        console.log('yes')
         setHeroName(null)
         setHeroData(null)
     }
