@@ -1,9 +1,9 @@
 import React, { useEffect }  from "react";
 import "./styles/styles.css";
-import From from "./components/form.js";
+import From from "./common/form.js";
 import fetchData from "./fetch.js";
-import SearchHero from "./components/SearchHero.js";
-import HeroCard from "./components/heroCard.js";
+import SearchHero from "./common/SearchHero.js";
+import HeroCard from "./common/heroCard.js";
 
 
 
