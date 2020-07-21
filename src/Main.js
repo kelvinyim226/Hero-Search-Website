@@ -1,17 +1,9 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect }  from "react";
 import "./styles.css";
 import From from "./form.js";
 import fetchData from "./fetch.js";
 import SearchHero from "./SearchHero.js";
 import HeroCard from "./heroCard.js";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams,
-  } from 'react-router-dom'
-import { array } from "js-md5";
 
 
 
@@ -21,11 +13,8 @@ function Main() {
     const [popularHeroData, setPopularHeroData] = React.useState(null)
     const [heroName, setHeroName] = React.useState(null)
     const [heroData, setHeroData] = React.useState(null)
-    let heroCollection = []
 
-    const functionWithPromise = item => { 
-        return Promise.resolve('ok')
-      }
+   
     const anAsyncFunction = async item => {
         return fetchData(item)
       }

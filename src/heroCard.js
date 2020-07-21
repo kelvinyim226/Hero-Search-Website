@@ -2,7 +2,6 @@ import React from "react";
 
 
 function HeroCard({heroData,heroDescription,styles}){
-    console.log(styles)
     const hero = heroData || '';
     const {description = '' , thumbnail = '' , name = ''} = hero
     const imageUrl = `${thumbnail.path}.${thumbnail.extension}`;

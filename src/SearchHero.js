@@ -1,7 +1,5 @@
 import React from "react";
 import "./styles.css";
-import From from "./form.js";
-import fetchData from "./fetch.js";
 import HeroCard from "./heroCard.js";
 
 function SearchHero({heroData,heroName}) {

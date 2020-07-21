@@ -9,7 +9,6 @@ function fetchData(data) {
     hash.update(ts + PRIV_KEY + API_KEY);
 
     url += `&ts=${ts}&hash=${hash}`;
-    console.log('url',url);
 
   return window
     .fetch(url, {
@@ -18,7 +17,6 @@ function fetchData(data) {
     })
     .then(response => response.json())
     .then(async response => {
-        console.log('Success:', response);
         if(response.data.results[0]){
         return response.data.results[0]
         }else{

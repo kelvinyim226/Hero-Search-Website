@@ -1,11 +1,7 @@
 import React from "react";
 import "./styles.css";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link,
-    useParams,
   } from 'react-router-dom'
   
 function Home() {
