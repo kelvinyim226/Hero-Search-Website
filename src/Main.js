@@ -33,6 +33,12 @@ function Main() {
     const getData = async () => {
         return Promise.all(popularHeroNames.map(item => anAsyncFunction(item)))
       }
+    const clearData = () => {
+        console.log('yes')
+        setHeroName(null)
+        setHeroData(null)
+    }
+
     useEffect(() => {
         getData().then(data => {
             setPopularHeroData(data)
@@ -51,20 +57,23 @@ function Main() {
         <div className="home">
             <h1>{heroName?'Result':'Popular Hero'}</h1>
         
-        <From onSubmit={handleSubmit} />
-        {heroName?
-        <SearchHero heroData={heroData} heroName={heroName}/>
-        :
-            <div style={{display:'flex',alignItems:'flex-start',margin:'10px'}}>
-            {popularHeroData? 
-                popularHeroData.map((heroData, index) =>{
-                    return (<HeroCard key={index} heroData={heroData} heroDescription={true} />)
-                })
-
-            :<div/>
-            }    
-        </div>
-        }
+          <From onSubmit={handleSubmit} styles={{margin:'10px',color:'white'}}/>
+          {heroName?
+          <div>
+            <SearchHero heroData={heroData} heroName={heroName}/>
+            <div onClick={clearData} className="backBtn">Back-></div>
+          </div>
+          :
+            <div className="mainContainer">
+              {popularHeroData? 
+              popularHeroData.map((heroData, index) =>{
+              return (
+              <HeroCard key={index} heroData={heroData} heroDescription={true} />)
+              })
+              :<div/>
+              }    
+          </div>
+          }
         </div>
     )
   }
