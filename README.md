@@ -2,11 +2,13 @@
 A development react website for training
 
 
-#Getting started
+# Getting started
 git clone https://github.com/kelvinyim226/Hero-Search-Website.git
 
-#installation
+
+# Installation
 npm i
 
-#Usage
+
+# Usage
 npm start
